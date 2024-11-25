@@ -1,0 +1,895 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f4f4f4;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilos do Header */
+.hero {
+    background: linear-gradient(120deg, #0078ff, #00c6ff);
+    color: white;
+    text-align: center;
+    padding: 10px 20px 100px 0px;
+    position: relative;
+}
+
+.logo img {
+    padding: 0px;
+    margin: 0px;
+    width: 300px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    position: absolute;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #0078ff;
+    position: relative;
+}
+
+/* Logo */
+.navbar .logo img {
+    max-width: 150px;
+}
+
+/* Menu */
+.navbar .menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding-left: 0;
+}
+
+/* Estilo dos links no menu */
+.navbar .menu li a {
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/* Hover nos links */
+.navbar .menu li a:hover {
+    color: #ffeb3b;
+}
+
+/* Botão hamburguer (escondido em telas grandes) */
+.menu-hamburger {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-content h1 span {
+    color: #ffeb3b;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background: #ffeb3b;
+    color: #0078ff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #fff;
+    color: #0078ff;
+}
+
+/* Seções */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.section p {
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Estilos gerais para a seção "Sobre Mim" */
+#about {
+    background-color: #1a1a1a;
+    color: #f1f1f1;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 20px;
+    color: #e6e6e6;
+}
+
+#about p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-family: 'Helvetica', sans-serif;
+}
+
+#about blockquote {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #f9a825;
+    margin: 30px 0;
+    padding: 10px 20px;
+    border-left: 5px solid #f9a825;
+    font-family: 'Georgia', serif;
+    background-color: rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+#about blockquote strong {
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Adicionando um efeito suave ao hover da frase */
+#about blockquote:hover {
+    background-color: rgba(249, 168, 37, 0.2);
+    transform: scale(1.02);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#about p strong {
+    font-weight: bold;
+    color: #f9a825;
+}
+
+
+/* Projetos */
+
+.project-card img {
+    width: 100%;
+    /* Faz a imagem ocupar toda a largura disponível */
+    height: 200px;
+    /* Define uma altura fixa para as imagens */
+    object-fit: cover;
+    /* Faz com que a imagem cubra a área disponível, sem distorcer */
+    border-radius: 8px;
+    /* Adiciona bordas arredondadas às imagens */
+}
+
+.projects .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.project-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: left;
+    padding: 20px;
+}
+
+.project-card h3 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+/* Estilo geral para os botões de mais informações */
+.project-card .btn {
+    background-color: transparent;  /* Cor de fundo transparente */
+    color: #333;  /* Cor do texto mais suave */
+    padding: 8px 15px;  /* Ajuste no espaçamento do botão */
+    border: 1px solid #ccc;  /* Borda discreta */
+    border-radius: 5px;  /* Bordas arredondadas */
+    font-weight: normal;  /* Menos peso na fonte */
+    text-transform: none;  /* Sem transformação de texto */
+    margin-top: 20px;  /* Espaço entre o conteúdo e o botão */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;  /* Suaviza a transição */
+    display: inline-block;  /* Para que o botão se comporte como um link */
+}
+
+/* Alterar cor do botão ao passar o mouse */
+.project-card .btn:hover {
+    background-color: #f0f0f0;  /* Cor de fundo suave ao passar o mouse */
+    color: #0078ff;  /* Cor do texto ao passar o mouse */
+    border-color: #0078ff;  /* Borda do botão ao passar o mouse */
+}
+
+/* Alinhar o botão à direita e adicionar espaçamento superior */
+.project-card .project-buttons {
+    display: flex;
+    justify-content: flex-end;  /* Alinha os botões à direita */
+    gap: 10px;  /* Espaço entre os botões */
+    margin-top: 15px;  /* Espaço entre o conteúdo e a linha dos botões */
+}
+
+
+
+/* Estilos para o Modal */
+.modal {
+    display: none;
+    /* Inicialmente oculto */
+    position: fixed;
+    /* Fica fixo na tela */
+    z-index: 9999;
+    /* Fica na frente de outros elementos */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Fundo preto transparente */
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+    /* Efeito suave para aparecer/desaparecer */
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90%;
+    /* Limita a largura do conteúdo */
+    max-height: 90%;
+    /* Limita a altura do conteúdo */
+    overflow: hidden;
+    /* Garante que nada ultrapasse os limites da caixa */
+    padding: 10px;
+    /* Espaço para a borda do modal */
+    background: white;
+    border-radius: 10px;
+    /* Bordas arredondadas */
+}
+
+.modal-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    /* Garante que a imagem se ajuste corretamente */
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    /* Remove espaços abaixo da imagem */
+    margin: auto;
+    overflow: auto;
+    /* Ativa o scroll quando necessário */
+}
+
+/* Scroll dentro do modal */
+.modal-content {
+    overflow: auto;
+    /* Permite que o modal tenha rolagem quando a imagem for maior */
+}
+
+/* Estilo do botão de fechar */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10000;
+    /* Fica acima da imagem */
+}
+
+.close-btn:hover {
+    color: #ff5c5c;
+}
+
+
+
+/* Estilos para a seção de habilidades */
+#skills {
+    text-align: center;
+    margin-top: 40px;
+    color: #EAEAEA;
+}
+
+#skills h2 {
+    font-size: 2rem;
+    color: #1E90FF;
+    border-bottom: 2px solid #1E90FF;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+/* Container de habilidades */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.skill {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 120px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+    /* Aumenta o ícone quando passar o mouse */
+    box-shadow: 0 0 15px rgba(30, 144, 255, 0.7);
+    /* Destaca o ícone com sombra */
+}
+
+.skill i {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #1E90FF;
+}
+
+.skill p {
+    font-size: 1rem;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+
+#contact .btn {
+    background-color: #1e90ff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+#contact .btn i {
+    margin-right: 10px;
+}
+
+#contact .btn:hover {
+    background-color: #3498db;
+}
+
+/* Estilo para o Modal de Currículo */
+#abrirModalCurriculo {
+    cursor: pointer; /* Altera o cursor para a mãozinha ao passar sobre o botão */
+}
+
+#modalCurriculo {
+    display: none;
+    /* Inicialmente o modal está oculto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    /* Fundo preto */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Fundo preto com transparência */
+}
+
+#modalCurriculo .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Estilo para o Modal de Currículo */
+#modalCurriculo {
+    display: none;
+    /* Inicialmente o modal está oculto */
+    position: fixed;
+    z-index: 1;
+    /* Coloca o modal acima de outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Fundo preto com transparência */
+    display: flex;
+    justify-content: center;
+    /* Alinha o modal horizontalmente no centro */
+    align-items: center;
+    /* Alinha o modal verticalmente no centro */
+}
+
+#modalCurriculo .modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    /* Necessário para posicionar o botão "X" corretamente */
+}
+
+#modalCurriculo img {
+    width: 100%;
+    /* A imagem ocupa toda a largura do modal */
+    height: auto;
+    object-fit: contain;
+    /* Garante que a imagem não distorça */
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #0078ff;
+    color: white;
+    padding: 20px;
+}
+
+/* Reset e estilos gerais continuam os mesmos */
+
+/* Responsividade para telas menores que 768px (telas de tablets e celulares) */
+@media (max-width: 768px) {
+    /* Estilo para o header */
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    .navbar .menu {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+    .logo img {
+        width: 200px;
+        margin-bottom: 20px;
+    }
+    
+    /* Ajuste para o hero */
+    .hero {
+        padding: 40px 20px 80px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+    
+    .btn {
+        font-size: 1rem;
+    }
+
+    /* Ajuste para as seções */
+    .section {
+        padding: 40px 20px;
+    }
+    
+    .section h2 {
+        font-size: 1.8rem;
+    }
+
+    .section p {
+        font-size: 0.9rem;
+        max-width: 100%;
+    }
+    
+    /* Sobre Mim */
+    #about h2 {
+        font-size: 2rem;
+    }
+
+    #about p {
+        font-size: 1rem;
+    }
+
+    /* Ajuste para o Grid de Projetos */
+    .projects .project-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Ajuste para as habilidades */
+    .skills-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .skill {
+        width: 100%;
+    }
+
+    /* Ajuste para o Modal */
+    .modal-content {
+        width: 90%;
+    }
+
+    /* Botão de fechar */
+    .close-btn {
+        font-size: 25px;
+        top: 5px;
+        right: 5px;
+    }
+}
+
+/* Responsividade para telas menores que 480px (smartphones) */
+@media (max-width: 480px) {
+    /* Ajuste geral para fontes menores */
+    body {
+        font-size: 14px;
+    }
+    
+    .navbar {
+        padding: 10px;
+    }
+    
+    .navbar .menu {
+        gap: 10px;
+    }
+    
+    .hero {
+        padding: 30px 10px;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .btn {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .section h2 {
+        font-size: 1.6rem;
+    }
+
+    /* Ajuste no grid de projetos */
+    .projects .project-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-card {
+        padding: 15px;
+    }
+
+    /* Ajuste nas habilidades */
+    .skills-container {
+        gap: 15px;
+    }
+    
+    .skill {
+        width: 100%;
+    }
+
+    /* Ajustes para o Modal */
+    .modal-content {
+        width: 90%;
+        padding: 15px;
+    }
+
+    /* Ajuste do botão de fechar */
+    .close-btn {
+        font-size: 20px;
+        top: 5px;
+        right: 5px;
+    }
+}
+/* Logo original (em telas maiores) */
+.logo img {
+    padding: 0px;
+    margin: 0px;
+    width: 300px;  /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    position: absolute; /* Mantém a posição da logo como absoluta */
+}
+
+/* Responsividade para telas menores que 768px (como tablets) */
+@media (max-width: 768px) {
+    .logo img {
+        width: 200px;  /* Ajuste o tamanho da logo para telas menores */
+        position: static;  /* Remove a posição absoluta */
+        display: block;  /* Faz a logo se comportar como um bloco */
+        margin: 0 auto;  /* Centraliza a logo horizontalmente */
+    }
+}
+
+/* Responsividade para telas menores que 480px (como smartphones) */
+@media (max-width: 480px) {
+    .logo img {
+        width: 150px;  /* Diminui ainda mais o tamanho da logo */
+        margin-top: 20px;  /* Adiciona um pouco de espaço no topo, caso necessário */
+    }
+}
+
+/* Estilo da logo para telas maiores que 1170px */
+@media (min-width: 1191px) {
+    .logo img {
+        width: 300px;  /* Mantém o tamanho da logo */
+        height: auto;
+        position: absolute;  /* Remover a posição absoluta */
+        margin: 0;  /* Remove margens extras */
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;  /* Espalha os itens ao longo do espaço disponível */
+        align-items: center;
+        padding: 20px 40px;
+    }
+
+    .logo {
+        position: static;  /* Logo no lado esquerdo */
+        margin-left: 0;  /* Ajuste da margem à esquerda */
+    }
+}
+
+/* Responsividade para telas menores que 1170px */
+@media (max-width: 1190px) {
+    .logo img {
+        width: 300px;  /* Mantém o tamanho da logo */
+        position: relative;  /* A logo ficará no topo, mas não fixa */
+        top: 0;  /* Coloca a logo no topo da página */
+        left: 50%;  /* Centraliza a logo horizontalmente */
+        transform: translateX(-50%);  /* Centraliza a logo em relação ao topo */
+    }
+
+    .hero {
+        padding: 40px 20px 40px;  /* Ajusta o espaçamento do topo */
+    }
+
+    /* Ajuste para o Header em telas menores */
+    .navbar {
+        padding: 5px;
+        flex-direction: column;  /* Alinha os itens na vertical */
+    }
+
+    .navbar .menu {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        margin-top: 0px;
+    }
+}
+
+/* Estilizando o footer */
+footer {
+    background-color: #333; /* Cor de fundo escura */
+    color: #fff; /* Texto branco */
+    padding: 20px 0; /* Espaçamento em cima e embaixo */
+    text-align: center;
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Estilizando o ícone do WhatsApp */
+.whatsapp-icon {
+    position: fixed; /* Fixa a posição */
+    bottom: 20px; /* Distância do rodapé */
+    right: 20px; /* Distância da borda direita */
+    background-color: #25D366; /* Cor do fundo do ícone */
+    color: white; /* Cor do ícone */
+    padding: 10px;
+    border-radius: 50%; /* Torna o ícone redondo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombrinha para destacar o ícone */
+    font-size: 30px; /* Tamanho do ícone */
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-icon:hover {
+    background-color: #128C7E; /* Cor de fundo ao passar o mouse */
+}
+
+/* Menu vertical (em telas pequenas) */
+@media (max-width: 768px) {
+    /* A navbar vai empilhar os itens verticalmente */
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .navbar .menu {
+        display: none; /* Inicialmente, o menu ficará oculto */
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Exibe o menu quando a classe "open" for adicionada */
+    .navbar .menu.open {
+        display: flex;
+    }
+
+    /* Estilo dos links no menu quando o layout for vertical */
+    .navbar .menu li {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    /* Exibe o botão hamburguer */
+    .menu-hamburger {
+        display: block;
+    }
+
+    /* Alterando a cor do ícone do menu quando estiver ativo */
+    .menu-hamburger.open i {
+        color: #ffeb3b;
+    }
+}
+
+/* Para telas maiores (menor que 769px) - menu horizontal */
+@media (min-width: 769px) {
+    .navbar .menu {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .menu-hamburger {
+        display: none;
+    }
+}
+
+/* Responsividade para telas menores que 768px (telas de tablets e celulares) */
+@media (max-width: 768px) {
+    /* Logo */
+    .logo img {
+        width: 200px;  /* Reduz a logo em telas menores */
+        margin: 0 auto;
+        display: block;  /* Centraliza a logo */
+    }
+
+    /* Navbar */
+    .navbar {
+        flex-direction: column;  /* Empilha os itens verticalmente */
+        padding: 10px 20px;  /* Ajuste do padding */
+    }
+
+    /* Menu */
+    .navbar .menu {
+        display: none;  /* Esconde o menu por padrão */
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        margin-top: 10px;
+        width: 100%;  /* Faz o menu ocupar toda a largura */
+    }
+
+    /* Exibe o menu quando a classe 'open' for adicionada */
+    .navbar .menu.open {
+        display: flex;
+    }
+
+    /* Estilo do botão hamburguer */
+    .menu-hamburger {
+        display: block;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* Estilo dos links no menu quando o layout for vertical */
+    .navbar .menu li {
+        width: 100%;
+        padding: 10px 0;
+    }
+}
+
+/* Responsividade para telas menores que 480px (smartphones) */
+@media (max-width: 480px) {
+    /* Logo */
+    .logo img {
+        width: 150px;  /* Diminui a logo em smartphones */
+    }
+
+    /* Ajustes no layout */
+    .navbar .menu {
+        gap: 10px;
+    }
+
+    .navbar {
+        padding: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;  /* Diminui o tamanho da fonte no título */
+    }
+
+    .hero-content p {
+        font-size: 1rem;  /* Ajusta o tamanho da fonte no parágrafo */
+    }
+
+    .section h2 {
+        font-size: 1.6rem;  /* Ajuste no título das seções */
+    }
+}
+
+/* Para telas maiores que 768px (menu horizontal) */
+@media (min-width: 769px) {
+    .navbar .menu {
+        display: flex;
+        flex-direction: row;  /* Mantém o menu na horizontal */
+        gap: 20px;  /* Espaçamento entre os itens */
+    }
+
+    .menu-hamburger {
+        display: none;  /* Esconde o ícone do hamburguer em telas maiores */
+    }
+}
